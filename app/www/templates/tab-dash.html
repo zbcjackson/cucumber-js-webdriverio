@@ -1,0 +1,11 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div class="list card" ng-repeat="blog in blogs">
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{blog.cover}}">
+        <h2>{{blog.title}}</h2>
+        <p>{{blog.content}}</p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
