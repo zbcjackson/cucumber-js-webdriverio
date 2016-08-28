@@ -1,23 +1,17 @@
 'use strict';
 
 var fs = require('fs');
-var webdriver = require('selenium-webdriver');
+var server = require('./mockServer')
 
 function World() {
 
   var defaultTimeout = 20000;
   var screenshotPath = "screenshots";
+  this.server = server;
 
   if(!fs.existsSync(screenshotPath)) {
     fs.mkdirSync(screenshotPath);
   }
-  
-  this.waitFor = function(cssLocator, timeout) {
-    var waitTimeout = timeout || defaultTimeout;
-    return driver.wait(function() {
-      return driver.isElementPresent({ css: cssLocator });
-    }, waitTimeout);
-  };
 };
 
 module.exports = function() {

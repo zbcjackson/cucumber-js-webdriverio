@@ -5,7 +5,7 @@ var expect = chai.expect;
 
 module.exports = function() {
   this.When(/^add (\d+) and (\d+)$/, function (first, second, next) {
-    browser.url("/");
+    browser.url("http://juliemr.github.io/protractor-demo/");
     browser.setValue('[ng-model=first]', first);
     browser.setValue('[ng-model=second]', second);
     browser.click('#gobutton');

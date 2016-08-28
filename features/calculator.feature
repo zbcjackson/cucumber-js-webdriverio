@@ -1,3 +1,4 @@
+@ignore
 Feature: Calculator
 
 Scenario: Add operator
